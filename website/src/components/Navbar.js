@@ -21,7 +21,7 @@ function Navbar() {
 
   window.addEventListener("resize", showButton);
 
-  // Navigation bar with menus using react router
+  // Navigation bar with router
   return (
     <>
       <nav className="navbar">
