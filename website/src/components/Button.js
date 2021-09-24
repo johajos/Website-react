@@ -12,7 +12,7 @@ export const Button = ({
   type,
   onClick,
   buttonStyle,
-  buttonSize
+  buttonSize,
 }) => {
   // If component has a buttonStyle then use buttonStyle, else use first option in STYLES array
   const checkButtonStyle = STYLES.includes(buttonStyle)

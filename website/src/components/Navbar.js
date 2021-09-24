@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import "./Navbar.css";
@@ -7,7 +7,9 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  // Change navbar menu icon on click
   const handleClick = () => setClick(!click);
+  // Close mobile navbar menu when clicking links
   const closeMobileMenu = () => setClick(false);
 
   // Show buttons depending on screen size
@@ -19,14 +21,18 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    showButton();
+  }, []);
+
   window.addEventListener("resize", showButton);
 
-  // Navigation bar with router
+  // Navigation bar with router links
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             TRVL <i className="fab fa-typo3" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
