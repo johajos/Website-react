@@ -36,7 +36,7 @@ function Cards() {
               path="/products"
             />
             <CardItem
-              src="images/img-8.jpg"
+              src="images/img-5.jpg"
               text="Ride through the Sahara Desert on a guided camel tour"
               label="Adrenaline"
               path="/sign-up"
